@@ -39,15 +39,15 @@ int main()
     self.push_back("    return 0;");
     self.push_back("}");
 
-    for (i = 0; i != 10; ++i)
+    for (i = 0; i != 11; ++i)
     {
         cout << self[i] << endl;
     }
     for (i = 0; i != self.size(); ++i)
     {
-        cout << self[10] << quote << self[i] << quote << self[11] << endl;
+        cout << self[11] << quote << self[i] << quote << self[12] << endl;
     }
-    for (i = 12; i != self.size(); ++i)
+    for (i = 13; i != self.size(); ++i)
     {
         cout << self[i] << endl;
     }
