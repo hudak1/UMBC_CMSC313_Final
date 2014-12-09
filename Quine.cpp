@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 
 int main()
@@ -10,6 +11,7 @@ int main()
     vector<string> self;
     self.push_back("#include <iostream>");
     self.push_back("#include <string>");
+    self.push_back("#include <vector>");
     self.push_back("");
     self.push_back("");
     self.push_back("int main()");
