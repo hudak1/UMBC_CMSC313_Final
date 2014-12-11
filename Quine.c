@@ -9,7 +9,7 @@ main() {
 		       "",
 		       "main() {", 
 		       "  int i, j, k;",
-		       "  const char *quote = (const char *)34",
+		       "  const char *quote = (const char *)34;",
 		       "  ",
 		       ",",
 		       "", 
