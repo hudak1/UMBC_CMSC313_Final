@@ -1,44 +1,34 @@
-#define SIZE 23
-string Q[SIZE];
-int i, j, k;
-int pos = -1;
-
-insQ(string e) {
-  ++pos;
-  Q[pos] = e;
-}
+#include <string.h>
+#include <stdio.h>
 
 main() {
-  insQ("#define SIZE 50");
-  insQ("string Q[SIZE];");
-  insQ("int i, j, k;");
-  insQ("int pos = -1;");
-  insQ("");
-  insQ("insQ(int e) {");
-  insQ("  ++pos;");
-  insQ("  Q[pos] = e;");
-  insQ("}");
-  insQ("");
-  insQ("main() {");
-  insQ("  insQ(");
-  insQ(");");
-  insQ("");
-  insQ("  for (i = 0; i < 11; i++)");
-  insQ("    printf(Q[i]);");
-  insQ("");
-  insQ("  for (j = 0; i < SIZE; i++)");
-  insQ("    printf(Q[11] + \" + Q[i] + \" + Q[12]);");
-  insQ("");
-  insQ("  for (k = 13; i < SIZE; i++)");
-  insQ("    printf(Q[i]);");
-  insQ("}");
+  int i, j, k;
+  const char *quote = (const char *)22;
+  const char *Q[18] = {"#include <string.h>",
+		       "#include <stdio.h>",
+		       "",
+		       "main() {", 
+		       "  int i, j, k;",
+		       "  const char *quote = (const char *)22",
+		       "  ",
+		       ",",
+		       "", 
+		       "  for (i = 0; i < 6; i++)", 
+		       "    printf(\"%s\", Q[i]);", 
+		       "", 
+		       "  for (j = 0; i < 18; i++)", 
+		       "    printf(\"%s%s%s%s%s\", Q[6], quote, Q[i], quote, Q[7]);", 
+		       "", 
+		       "  for (k = 8; k < 18; k++)", 
+		       "    printf(\"%s\", Q[i]);", 
+		       "}"};
   
-  for (i = 0; i < 11; i++)
-    printf(Q[i]);
+  for (i = 0; i < 6; i++)
+    printf("%s", Q[i]);
 
-  for (j = 0; i < SIZE; i++)
-    printf(Q[11] + \" + Q[i] + \" + Q[12]);
+  for (j = 0; j < 18; j++)
+    printf("%s%s%s%s%s", Q[6], quote, Q[i], quote, Q[7]);
 
-  for (k = 13; i < SIZE; i++)
-    printf(Q[i]);
+  for (k = 8; k < 18; k++)
+    printf("%s", Q[i]);
 }
