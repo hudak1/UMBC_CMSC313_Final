@@ -75,7 +75,7 @@ def main():
         sys.stdout.write(selfList[40])
         print newLine,
 
-    for i in range(41, 56):
+    for i in range(41, 57):
         print selfList[i]
 
 main()
